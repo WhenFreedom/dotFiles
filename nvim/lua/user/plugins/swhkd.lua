@@ -1,0 +1,4 @@
+return {
+	"WhenFreedom/vim-sxhkdrc",
+
+}

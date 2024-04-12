@@ -1,0 +1,19 @@
+#!/bin/bash
+currentMonitor=$(hyprctl activeworkspace | awk 'NR==1 {print $7}' | sed 's/://g')
+grim -o $currentMonitor /tmp/temp.jpg
+eog -f /tmp/temp.jpg & disown
+while [ -z $(pidof eog) ]; do
+  sleep 0.1;
+done
+grim -g "$(slurp)" /tmp/temp.png
+
+kill $(pidof eog)
+
+if [ -f "/tmp/temp.png" ]; then
+	wl-copy < /tmp/temp.png
+	notify-send -i /tmp/temp.png "Grim" "Screenshot copied to clipboard."
+	rm /tmp/temp.png
+fi
+
+rm /tmp/temp.jpg
+
