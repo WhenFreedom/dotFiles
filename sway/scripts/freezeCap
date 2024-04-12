@@ -1,5 +1,5 @@
 #!/bin/bash
-currentMonitor=$(hyprctl activeworkspace | awk 'NR==1 {print $7}' | sed 's/://g')
+currentMonitor=$(swaymsg -p -t get_outputs | awk '/\(focused\)/ {print $2}')
 grim -o $currentMonitor /tmp/temp.jpg
 eog -f /tmp/temp.jpg & disown
 while [ -z $(pidof eog) ]; do

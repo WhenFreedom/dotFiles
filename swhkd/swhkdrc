@@ -10,6 +10,12 @@ super + {1, 2, 3, 4, 5, 6, 7, 8, 9}
 super + shift + {1, 2, 3, 4, 5, 6, 7, 8, 9}
 	swaymsg move container to workspace number {1, 2, 3, 4, 5, 6, 7, 8, 9}
 
+super + alt + {1, 2, 3, 4, 5, 6, 7, 8, 9}
+	swaymsg workspace number {10, 11, 12, 13, 14, 15 ,16 ,17, 18}
+
+super + alt + shift + {1, 2, 3, 4, 5, 6, 7, 8, 9}
+	swaymsg move container to workspace number {10, 11, 12, 13, 14, 15, 16, 17, 18}
+
 super + {b,v}
 	swaymsg split{h,v}
 
@@ -30,6 +36,9 @@ super + shift + s
 
 super + r
 	swaymsg mode "resize"
+
+p
+	./
 
 
 
