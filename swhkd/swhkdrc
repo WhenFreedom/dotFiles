@@ -16,8 +16,8 @@ super + alt + {1, 2, 3, 4, 5, 6, 7, 8, 9}
 super + alt + shift + {1, 2, 3, 4, 5, 6, 7, 8, 9}
 	swaymsg move container to workspace number {10, 11, 12, 13, 14, 15, 16, 17, 18}
 
-super + {b,v}
-	swaymsg split{h,v}
+super + {z}
+	swaymsg split toggle
 
 super + {s,w,e}
 	swaymsg layout {stacking,tabbed,toggle split}
@@ -34,13 +34,17 @@ super + s
 super + shift + s
 	swaymsg scratchpad show
 
-super + r
+super + d
 	swaymsg mode "resize"
 
-p
-	./
+print
+	exec ~/.config/swhkd/freezeCap
 
+#super + ctrl + {Up, Down, Right, Left}
+#	swaymsg resize {shrink, grow, grow, shrink} {height, height, width, width} 10px
 
+super + ctrl + {Right, Left}
+	swaymsg resize {shrink, grow} width 10px
 
 
 
