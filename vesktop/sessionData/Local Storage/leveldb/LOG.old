@@ -1,0 +1,72 @@
+2024/05/05-15:22:34.519 697fc Reusing MANIFEST /home/peachfuzz/.config/vesktop/sessionData/Local Storage/leveldb/MANIFEST-000001
+2024/05/05-15:22:34.547 697fc Recovering log #1160
+2024/05/05-15:22:34.549 697fc Reusing old log /home/peachfuzz/.config/vesktop/sessionData/Local Storage/leveldb/001160.log 
+2024/05/05-15:25:24.064 6982c Level-0 table #1164: started
+2024/05/05-15:25:24.067 6982c Level-0 table #1164: 30136 bytes OK
+2024/05/05-15:25:24.068 6982c Delete type=0 #1160
+2024/05/05-15:29:32.926 6982c Level-0 table #1166: started
+2024/05/05-15:29:32.928 6982c Level-0 table #1166: 28380 bytes OK
+2024/05/05-15:29:32.929 6982c Delete type=0 #1163
+2024/05/05-16:05:21.327 6982c Level-0 table #1168: started
+2024/05/05-16:05:21.329 6982c Level-0 table #1168: 38990 bytes OK
+2024/05/05-16:05:21.331 6982c Delete type=0 #1165
+2024/05/05-16:05:21.331 6982c Compacting 4@0 + 1@1 files
+2024/05/05-16:05:21.335 6982c Generated table #1169@0: 69 keys, 55222 bytes
+2024/05/05-16:05:21.335 6982c Compacted 4@0 + 1@1 files => 55222 bytes
+2024/05/05-16:05:21.336 6982c compacted to: files[ 0 1 1 0 0 0 0 ]
+2024/05/05-16:05:21.337 6982c Delete type=2 #1158
+2024/05/05-16:05:21.337 6982c Delete type=2 #1161
+2024/05/05-16:05:21.337 6982c Delete type=2 #1164
+2024/05/05-16:05:21.337 6982c Delete type=2 #1166
+2024/05/05-16:05:21.337 6982c Delete type=2 #1168
+2024/05/05-16:22:54.778 6982c Level-0 table #1171: started
+2024/05/05-16:22:54.780 6982c Level-0 table #1171: 19535 bytes OK
+2024/05/05-16:22:54.781 6982c Delete type=0 #1167
+2024/05/05-16:29:57.223 6982c Level-0 table #1173: started
+2024/05/05-16:29:57.226 6982c Level-0 table #1173: 26252 bytes OK
+2024/05/05-16:29:57.227 6982c Delete type=0 #1170
+2024/05/05-16:31:11.845 6982c Level-0 table #1175: started
+2024/05/05-16:31:11.847 6982c Level-0 table #1175: 23630 bytes OK
+2024/05/05-16:31:11.848 6982c Delete type=0 #1172
+2024/05/05-16:49:26.899 6982c Level-0 table #1177: started
+2024/05/05-16:49:26.901 6982c Level-0 table #1177: 37720 bytes OK
+2024/05/05-16:49:26.903 6982c Delete type=0 #1174
+2024/05/05-16:49:26.903 6982c Compacting 4@0 + 1@1 files
+2024/05/05-16:49:26.906 6982c Generated table #1178@0: 69 keys, 55324 bytes
+2024/05/05-16:49:26.906 6982c Compacted 4@0 + 1@1 files => 55324 bytes
+2024/05/05-16:49:26.907 6982c compacted to: files[ 0 1 1 0 0 0 0 ]
+2024/05/05-16:49:26.907 6982c Delete type=2 #1169
+2024/05/05-16:49:26.907 6982c Delete type=2 #1171
+2024/05/05-16:49:26.907 6982c Delete type=2 #1173
+2024/05/05-16:49:26.907 6982c Delete type=2 #1175
+2024/05/05-16:49:26.907 6982c Delete type=2 #1177
+2024/05/05-16:50:09.130 6982c Level-0 table #1180: started
+2024/05/05-16:50:09.132 6982c Level-0 table #1180: 19178 bytes OK
+2024/05/05-16:50:09.133 6982c Delete type=0 #1176
+2024/05/05-16:50:32.299 6982c Level-0 table #1182: started
+2024/05/05-16:50:32.301 6982c Level-0 table #1182: 24533 bytes OK
+2024/05/05-16:50:32.302 6982c Delete type=0 #1179
+2024/05/05-16:51:17.802 6982c Level-0 table #1184: started
+2024/05/05-16:51:17.804 6982c Level-0 table #1184: 19209 bytes OK
+2024/05/05-16:51:17.806 6982c Delete type=0 #1181
+2024/05/05-16:51:29.784 6982c Level-0 table #1186: started
+2024/05/05-16:51:29.786 6982c Level-0 table #1186: 24568 bytes OK
+2024/05/05-16:51:29.787 6982c Delete type=0 #1183
+2024/05/05-16:51:29.787 6982c Compacting 4@0 + 1@1 files
+2024/05/05-16:51:29.789 6982c Generated table #1187@0: 69 keys, 55401 bytes
+2024/05/05-16:51:29.789 6982c Compacted 4@0 + 1@1 files => 55401 bytes
+2024/05/05-16:51:29.790 6982c compacted to: files[ 0 1 1 0 0 0 0 ]
+2024/05/05-16:51:29.791 6982c Delete type=2 #1178
+2024/05/05-16:51:29.791 6982c Delete type=2 #1180
+2024/05/05-16:51:29.791 6982c Delete type=2 #1182
+2024/05/05-16:51:29.791 6982c Delete type=2 #1184
+2024/05/05-16:51:29.791 6982c Delete type=2 #1186
+2024/05/05-16:51:36.025 6982c Level-0 table #1189: started
+2024/05/05-16:51:36.027 6982c Level-0 table #1189: 19238 bytes OK
+2024/05/05-16:51:36.028 6982c Delete type=0 #1185
+2024/05/05-16:51:57.504 6982c Level-0 table #1191: started
+2024/05/05-16:51:57.506 6982c Level-0 table #1191: 24590 bytes OK
+2024/05/05-16:51:57.507 6982c Delete type=0 #1188
+2024/05/05-16:52:54.782 6982c Level-0 table #1193: started
+2024/05/05-16:52:54.785 6982c Level-0 table #1193: 19264 bytes OK
+2024/05/05-16:52:54.786 6982c Delete type=0 #1190

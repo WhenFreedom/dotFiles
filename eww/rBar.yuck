@@ -1,0 +1,31 @@
+(defwidget rBar []
+    (box
+      :class "right-bar"
+      :space-evenly false
+      :spacing 10
+      :orientation "horizontal"
+      :halign "end"
+      (date)
+      (time)
+    ))
+  
+  (defwidget date []
+    (rTemp
+      :cL "date-date"
+      (label
+        :text "${date.date}")))
+  
+  (defwidget time []
+    (rTemp
+      :cL "date-time"
+      (label
+        :text "${date.time}")))
+  
+  (defwidget rTemp [cL]
+    (box
+      :class "${cL}"
+      :orientation "horizontal"
+      :halign "end"
+      (children)))
+  
+  (defpoll date :interval "1s" "eww-time")

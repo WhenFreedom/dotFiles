@@ -1,0 +1,57 @@
+(defwidget cBar []
+  (box
+    :class "center-bar"
+    :orientation "horizontal"
+    :halign "center"
+    (music-bar)))
+
+(defwidget music-bar []
+  (eventbox
+    :onclick "mpc toggle"
+    (box
+      :space-evenly false
+      :orientation "vertical"
+      :class "mpd"
+      (mpd)
+      (song-time))))
+
+(defwidget mpd []
+  (cBox
+    :spacing 8
+    (label
+      :text "${mpd-info[0].state == "Play" ? "" : ""}"
+      :class "${mpd-info[0].state == "Play" ? "status-play" : "status-pause"}")
+    (label
+      :class "artist"
+      :text "${mpd-info[0].artist}")
+    (label
+      :class "dash"
+      :text "-")
+    (label
+      :class "title"
+      :text "${mpd-info[0].title}")))
+
+(defwidget song-time []
+  (box
+    :orientation "horizontal"
+    :space-evenly false
+    :halign "center"
+    (label
+      :orientation "horizontal"
+      :text "${mpd-info[1].minutes}")
+    (label 
+      :text ":")
+    (label
+      :text "${mpd-info[1].seconds}")))
+
+(defpoll mpd-info :interval "1s" "mpd-eww song")
+
+(defwidget cBox [?spacing ?cL]
+  (box
+    :orientation "horizontal"
+    :halign "center"
+    :space-evenly false
+    :spacing "${spacing}"
+    :class "${cL}"
+    (children)))
+

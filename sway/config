@@ -1,4 +1,6 @@
 exec swww-daemon & swww img ~/.config/sway/wallpaperflare.com_wallpaper.jpg 
+exec swhks & pkexec swhkd --config ~/.config/swhkd/swhkdrc & disown
+exec autotiling-rs
 ### Variables
 
 set $m1 DP-2
@@ -47,7 +49,9 @@ set $menu wofi --show drun
 blur enable
 shadows enable
 gaps inner 15px
-gaps outer 20px
+gaps outer 15px
 smart_gaps on
 
 include /etc/sway/config.d/*
+#output HDMI-A-2 transform 270
+

@@ -1,5 +1,4 @@
 
-mpd=$(mpc current)
 time="%T"
 
 autoload -Uz promptinit && promptinit

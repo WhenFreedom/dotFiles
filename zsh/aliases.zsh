@@ -2,9 +2,10 @@ alias sudo='sudo '
 alias ls='ls --color=auto'
 alias mkdir='mkdir -p -v'
 alias spotify='LD_PRELOAD=/usr/local/lib/spotify-adblock.so spotify-launcher'
-code () { vscodium }
+code () { vscodium -r $1 }
 alias kmonade='kmonad ~/.config/kmonad/keyboard.kbd'
 chmox () { chmod +x $1 }
+alias swR="sudo pkill -HUP swhkd"
 
 editor () {
   case $2 in
@@ -35,6 +36,7 @@ creConf "mpd"       "mpd.conf"
 creConf "mpDris2"   "mpDris2.conf"
 creConf "nvim"      "init.lua"
 creConf "rofi"      "config.rasi"
+creConf "swhkd"     "swhkdrc"
 
 #Programming Documents
 progd=~/Documents/Programming

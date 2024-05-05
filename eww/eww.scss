@@ -1,0 +1,97 @@
+* {
+    all: unset;
+}
+
+@mixin module ($bg, $col) {
+    background: $bg;
+    padding: 0px 10px 0px 10px;
+    font-weight: bold;
+    color: $col;
+    border: black 1px solid
+}
+
+@mixin workS ($bg) {
+    background: $bg;
+    padding: 5px 7px 5px 7px;
+    border-radius: 10px;
+    margin: 4px 5px 4px 5px;
+    border: solid rgba(255, 255, 255, 0.514) 1px;
+}
+
+.something {
+    @include workS($bg: black);
+}
+
+
+
+@mixin mons {
+    background: rgba(0, 0, 0, 0.185);
+    border-radius: 10px;
+    border: solid rgba(255, 255, 255, 0.445) 1px;
+}
+.sBar {
+    background-color: rgba(0, 0, 0, 0.418);
+    border-bottom: solid rgba(255, 255, 255, 0.253) 2px;
+    .right-bar {
+        .date-date {
+            @include module($bg: rgba(255, 0, 0, 0.514), $col: black);
+        }
+        .date-time {
+            @include module($bg: rgba(0, 0, 255, 0.404), $col: rgb(0, 0, 0));
+        }
+    }
+
+    .center-bar {
+        @include mons;
+        padding: 2px 7px 2px 7px;
+        .mpd {
+            .status-play {
+                color: red;
+                font-weight: bold;
+            }
+            .artist {
+                font-weight: bold;
+
+            }
+            .dash {
+                color: gold;
+                font-weight: bold;
+                font-size: 20px;
+
+            }
+            .title {
+
+            }
+        }
+    }
+
+
+
+    
+
+    .left-bar {
+        .workspaces {
+            $inactive: rgba(161, 134, 158, 0.534);
+            $active: rgba(204, 0, 255, 0.377);
+            .work1 {
+                @include mons;
+                .mon1 {
+                    @include workS($inactive);
+                }
+                .mon1A {
+                    @include workS($active);
+                }
+                
+            }
+            .work2 {
+                @include mons;
+                .mon2 {
+                    @include workS($inactive);
+                }
+                .mon2A {
+                    @include workS($active);
+                }
+            }
+        }
+    }
+}

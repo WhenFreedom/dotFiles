@@ -1,57 +1,37 @@
-super + {Up, Down, Right, Left}
-	swaymsg focus {up, down, right, left}
+super + {_,ctrl +} {1-9}
+	hyprctl dispatch {workspace,movetoworkspace} {1-9}
+
+super + {_,ctrl +} alt + {1,2,3,4,5,6,7,8,9}
+	hyprctl dispatch {workspace,movetoworkspace} {10,11,12,13,14,15,16,17,18}
+
+super + {c,f,s,z}
+	hyprctl dispatch {killactive,fullscreen,togglespecialworkspace magic,togglefloating}
+
+super + ctrl + s 
+	hyprctl dispatch movetoworkspace special:magic
+
+super + {_, ctrl +} {Up,Down,Right,Left}
+	hyprctl dispatch {movefocus,movewindow} {u,d,r,l}
+
+super + {_,alt +} space
+	hyprctl dispatch {moveoutofgroup,lockactivegroup toggle}
+
+super + alt + {Right, Left}
+	hyprctl dispatch changegroupactive {f,b}
 
 super + shift + {Up, Down, Right, Left}
-	swaymsg move {up, down, right, left}
+	hyprctl dispatch moveintogroup {u,d,r,l}
 
-super + {1, 2, 3, 4, 5, 6, 7, 8, 9}
-	swaymsg workspace number {1, 2, 3, 4, 5, 6, 7, 8, 9}
+altgr + space
+	hyprctl dispatch togglegroup
 
-super + shift + {1, 2, 3, 4, 5, 6, 7, 8, 9}
-	swaymsg move container to workspace number {1, 2, 3, 4, 5, 6, 7, 8, 9}
+shift + {Up,Down}
+	pactl set-sink-volume 0 {+,-}5
 
-super + alt + {1, 2, 3, 4, 5, 6, 7, 8, 9}
-	swaymsg workspace number {10, 11, 12, 13, 14, 15 ,16 ,17, 18}
-
-super + alt + shift + {1, 2, 3, 4, 5, 6, 7, 8, 9}
-	swaymsg move container to workspace number {10, 11, 12, 13, 14, 15, 16, 17, 18}
-
-super + {z}
-	swaymsg split toggle
-
-super + {s,w,e}
-	swaymsg layout {stacking,tabbed,toggle split}
-
-super + {f, space, a, c}
-	swaymsg {fullscreen, floating toggle, focus parent, kill}
-
-super + shift + space
-	swaymsg floating toggle
-
-super + s
-	swaymsg scratchpad show
-
-super + shift + s
-	swaymsg scratchpad show
-
-super + d
-	swaymsg mode "resize"
+XF86Audio{Next,Prev,Play}
+	mpc {next,prev,toggle}
 
 print
-	exec ~/.config/swhkd/freezeCap
+  exec /home/peachfuzz/Documents/freezeCap
 
-#super + ctrl + {Up, Down, Right, Left}
-#	swaymsg resize {shrink, grow, grow, shrink} {height, height, width, width} 10px
-
-super + ctrl + {Right, Left}
-	swaymsg resize {shrink, grow} width 10px
-
-
-
-
-
-
-XF86Audio{RaiseVolume, LowerVolume}
-	pactl set-sink-volume 0 {+, -}5%
-
-
+	

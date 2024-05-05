@@ -1,0 +1,57 @@
+super + {Up, Down, Right, Left}
+	swaymsg focus {up, down, right, left}
+
+super + shift + {Up, Down, Right, Left}
+	swaymsg move {up, down, right, left}
+
+super + {1, 2, 3, 4, 5, 6, 7, 8, 9}
+	swaymsg workspace number {1, 2, 3, 4, 5, 6, 7, 8, 9}
+
+super + shift + {1, 2, 3, 4, 5, 6, 7, 8, 9}
+	swaymsg move container to workspace number {1, 2, 3, 4, 5, 6, 7, 8, 9}
+
+super + alt + {1, 2, 3, 4, 5, 6, 7, 8, 9}
+	swaymsg workspace number {10, 11, 12, 13, 14, 15 ,16 ,17, 18}
+
+super + alt + shift + {1, 2, 3, 4, 5, 6, 7, 8, 9}
+	swaymsg move container to workspace number {10, 11, 12, 13, 14, 15, 16, 17, 18}
+
+super + {z}
+	swaymsg split toggle
+
+super + {s,w,e}
+	swaymsg layout {stacking,tabbed,toggle split}
+
+super + {f, space, a, c}
+	swaymsg {fullscreen, floating toggle, focus parent, kill}
+
+super + shift + space
+	swaymsg floating toggle
+
+super + s
+	swaymsg scratchpad show
+
+super + shift + s
+	swaymsg scratchpad show
+
+super + d
+	swaymsg mode "resize"
+
+print
+	exec ~/.config/swhkd/freezeCap
+
+#super + ctrl + {Up, Down, Right, Left}
+#	swaymsg resize {shrink, grow, grow, shrink} {height, height, width, width} 10px
+
+super + ctrl + {Right, Left}
+	swaymsg resize {shrink, grow} width 10px
+
+
+
+
+
+
+XF86Audio{RaiseVolume, LowerVolume}
+	pactl set-sink-volume 0 {+, -}5%
+
+

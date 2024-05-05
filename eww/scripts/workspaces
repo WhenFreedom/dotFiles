@@ -1,0 +1,15 @@
+#!/bin/bash
+toArray() {
+  active="$(hyprctl activeworkspace | awk -F '[()]' 'NR==1 {print $2}')"
+  while read workspace; do
+    if [[ $workspace -lt 10 ]] && [[ $workspace =~ [0-9] ]]; then
+      one+=($workspace)
+    elif [[ $workspace -gt 9 ]] && [[ $workspace =~ [0-9] ]]; then
+      two+=($workspace)
+    else 
+      three+=($workspace)
+    fi
+  done
+  printf '{ "one" : "[%s]", "two" : "[%s]", "active" : "%s" }' "$(echo "${one[@]}" | sed 's/ /, /g')" "$(echo "${two[@]}" | sed 's/ /, /g')" "$active"
+}
+hyprctl workspaces | awk -F '[()]' '/workspace ID/ {print $2}' | sort |  toArray

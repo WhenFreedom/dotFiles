@@ -1,0 +1,56 @@
+(defwidget lBar []
+  (box
+    :class "left-bar"
+    :space-evenly false
+    :orientation "horizontal"
+    :halign "start"
+    (workspace)
+    ))
+
+(defwidget workspace []
+  (box
+    :space-evenly false
+    :spacing 4
+    :halign "start"
+    :orientation "horizontal"
+    :class "workspaces"
+    (mon1)
+    (mon2)))
+
+(defwidget mon1 []
+  (box
+    :class "work1"
+    (for w in "${workS.one}"
+      (work
+        :c "${w}"
+        :cL "mon1"
+        :w "${w}"
+        (label
+          :text "${w}"))))
+)
+
+(defwidget mon2 []
+  (box
+    :class "work2"
+    (for w in "${workS.two}"
+      (work
+        :c "${w}"
+        :cL "mon2"
+        :w "${w}"
+        (label
+          :text "${w}"))))
+)
+
+
+
+(defwidget work [cL w ?c]
+  (eventbox
+    :onclick "hyprctl dispatch workspace ${c}"
+    (box
+      :spacing 0
+      :class "${w == workS.active ? "${cL}A" : "${cL}"}"
+      :halign "start"
+      :orientation "horizontal"
+      (children))))
+
+(defpoll workS :interval "1s" "./scripts/workspaces")

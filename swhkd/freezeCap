@@ -10,7 +10,7 @@ grim -g "$(slurp)" /tmp/temp.png
 kill $(pidof eog)
 
 if [ -f "/tmp/temp.png" ]; then
-	wl-copy < /tmp/temp.png
+	swappy -f /tmp/temp.png
 	notify-send -i /tmp/temp.png "Grim" "Screenshot copied to clipboard."
 	rm /tmp/temp.png
 fi
