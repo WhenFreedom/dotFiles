@@ -1,3 +1,0 @@
-2024/04/25-13:12:42.096 48ef3 Reusing MANIFEST /home/peachfuzz/.config/vesktop/sessionData/WebStorage/2/IndexedDB/indexeddb.leveldb/MANIFEST-000001
-2024/04/25-13:12:42.097 48ef3 Recovering log #7
-2024/04/25-13:12:42.097 48ef3 Reusing old log /home/peachfuzz/.config/vesktop/sessionData/WebStorage/2/IndexedDB/indexeddb.leveldb/000007.log 
