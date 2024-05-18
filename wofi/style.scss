@@ -1,0 +1,36 @@
+$selected-background: rgba(255, 255, 255, 0.178);
+
+#window {
+    background-color: rgba(45, 49, 73, 0.774);
+    border: solid white 1px;
+
+    #input {
+        background-color: rgba(255, 255, 255, 0.425);
+        color: white;
+        font-weight: bold;
+        &:focus {
+            background: white;
+            color: black;
+        }
+        &:selected {
+            background-color: white;
+            color: black;
+        }
+        
+    }
+
+    #entry {
+        color: white;
+        border: rgba(255, 255, 255, 0.082) solid 1px;
+        &:selected {
+            background-color: $selected-background;
+        }
+        &:hover {
+            background-color: $selected-background;
+        }
+        #expander-box {
+            background-color: rgba(0, 128, 0, 0.192);
+        }
+
+    }
+}

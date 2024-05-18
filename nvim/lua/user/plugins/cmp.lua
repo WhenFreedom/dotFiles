@@ -7,6 +7,7 @@ return {
 		"hrsh7th/cmp-cmdline",
 		"hrsh7th/nvim-cmp",
 		"L3MON4D3/LuaSnip",
+    "hrsh7th/cmp-path",
 		"saadparwaiz1/cmp_luasnip" 
 	},
 
@@ -18,7 +19,7 @@ return {
 		mapping = cmp.mapping.preset.insert({
 			["<C-Space>"] = cmp.mapping.complete(),
 			["<C-e"] = cmp.mapping.abort(),
-			["<CR>"] = cmp.mapping.confirm({ select = true }),
+			["<C-a>"] = cmp.mapping.confirm({ select = true }),
 		}),
 		sources = cmp.config.sources({
 			{ name = "nvim_lsp" },

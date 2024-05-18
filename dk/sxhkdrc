@@ -1,0 +1,14 @@
+super + {Return, r}
+  {kitty,rofi -show drun}
+
+super + {c,f}
+  dkcmd win {kill,full}
+
+super + shift + {q,m}
+  dkcmd {exit, restart}
+
+super + KP_{End,Down,Next,Left,Begin,Right,Home,Up,Prior}
+  dkcmd ws {1,2,3,4,5,6,7,8,9}
+
+super + alt + KP_{End,Down,Next,Left,Begin,Home,Up,Prior}
+  dkcmd ws {10,11,12,13,14,15,16,17,18}

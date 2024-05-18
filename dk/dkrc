@@ -1,0 +1,21 @@
+#!/bin/bash
+
+pkill sxhkd
+sxhkd -c "$HOME/.config/dk/sxhkdrc" &
+
+dkcmd set ws=_ apply gap=10
+dkcmd set static_ws=true numws=18
+
+mon1='DP-2'
+mon2='HDMI-A-2'
+
+for i in {1..9}; do
+  dkcmd set ws=$i mon=$mon1
+done
+
+dkcmd set static_ws=true
+for i in {10..18}; do
+  dkcmd set ws=$i mon=$mon2
+done
+
+border_width=50

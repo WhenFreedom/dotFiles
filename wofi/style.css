@@ -1,0 +1,32 @@
+#window {
+  background-color: rgba(45, 49, 73, 0.774);
+  border: solid white 1px;
+}
+#window #input {
+  background-color: rgba(255, 255, 255, 0.425);
+  color: white;
+  font-weight: bold;
+}
+#window #input:focus {
+  background: white;
+  color: black;
+}
+#window #input:selected {
+  background-color: white;
+  color: black;
+}
+#window #entry {
+  color: white;
+  border: rgba(255, 255, 255, 0.082) solid 1px;
+}
+#window #entry:selected {
+  background-color: rgba(255, 255, 255, 0.178);
+}
+#window #entry:hover {
+  background-color: rgba(255, 255, 255, 0.178);
+}
+#window #entry #expander-box {
+  background-color: rgba(0, 128, 0, 0.192);
+}
+
+/*# sourceMappingURL=style.css.map */

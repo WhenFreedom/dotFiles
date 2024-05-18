@@ -1,0 +1,13 @@
+#!/bin/bash
+
+
+volume=$(pactl get-sink-volume 0 | awk '{print $5}' | sed 's/%//g')
+
+if [[ "$1" == "raise" ]]; then
+  pactl set-sink-volume 0 +5%
+else
+  pactl set-sink-volume 0 -5%
+fi
+
+dunstify "$volume" -h int:value:$volume -t 800 -r 2345
+

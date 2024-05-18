@@ -1,0 +1,9 @@
+#!/bin/bash
+
+while true; do
+  if [[ ! -z $(find . -mmin -0.017 -type f -print) ]]; then
+    killall dunst
+    dunst &
+  fi
+  sleep 1.2
+done

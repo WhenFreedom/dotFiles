@@ -1,0 +1,6 @@
+show=drun,run
+allow_images=true
+allow_markup=true
+exec_search=true
+image_size=20
+width=20%
